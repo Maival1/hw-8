@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 28px;
+  color: #424242;
+}
+
+.user__name {
+  display: flex;
+  gap: 16px;
+
+}
+
+.user__item {
+  padding: 0.688rem 1rem;
+  font-size: 1.3125rem;
+  border: 1px solid #BDBDBD;
+  border-radius: 5.1875rem;
+}
+
+.user__item-phone {
+  appearance: none;
+}
+
+.user__item-email {
+  width: 456px;
+}
+
+.box {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.box+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.box+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #CFA5A5;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.box:checked+label::before {
+  border-color: #CFA5A5;
+  background-color: #CFA5A5;
+  background-image: ✓ ; /* тут должна быть свг галочки */
+}
+
+
+
